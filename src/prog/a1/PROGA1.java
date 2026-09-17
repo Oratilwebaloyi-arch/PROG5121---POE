@@ -75,7 +75,12 @@ public class PROGA1 {
     public boolean loginUser(String username , String password){
         return this.username.equals(username)&& this.password.equals(password);
     }
-             
+     //login status
+    public String returnLoginStatus(String username ,String password);
+       if (loginUser(username ,password)){
+           return "Welcome"+name +","+ surname + "great to see you again";
+        } esle {
+             return "username or password incorrect , try again";
              
     }
     
