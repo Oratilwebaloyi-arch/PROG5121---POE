@@ -49,7 +49,7 @@ public class PROGA1 {
     public boolean verifyCellphone(String cellPhone){
       // +27 then the 9 digits
       return cellPhone.matches("^\\+27\\d{9,10}$");
-}
+} 
       //register the user
     public String registerUser(String username ,String password ,String cellPhone){
        if (!verifyUserName(username)) {
@@ -64,6 +64,17 @@ public class PROGA1 {
            return "Cell phone not correctly formatted or does not contain the international code.";
            
        }
+        // if details are correct save them 
+        this.username = username;
+        this.password = password;
+        this.cellPhone = cellPhone;
+        
+        return "user registered";
+    } 
+        //user login
+    public boolean loginUser(String username , String password){
+        return this.username.equals(username)&& this.password.equals(password);
+    }
              
              
     }
