@@ -16,7 +16,7 @@ public class PROGA1 {
      //Attributes to store user details
      private String username;
      private String password;
-     private String phoneNumber;
+     private String cellPhone;
      private String name;
      private String surname;
      
@@ -50,8 +50,20 @@ public class PROGA1 {
       // +27 then the 9 digits
       return cellPhone.matches("^\\+27\\d{9,10}$");
 }
-    
-     
+      //register the user
+    public String registerUser(String username ,String password ,String cellPhone){
+       if (!verifyUserName(username)) {
+           return "Username not correctly formatted; please ensure that your username contains an undercore and does not have more than five characters in length.";
+           
+       }
+       if (!verifyPasswordRequirements(password)){
+           return "Password not correctly formated;please ensure that the password contains atleast eight characters,a capital letter ,number and a special character.";
+           
+       }
+       if (!verifyCellphone(cellPhone)){
+           return "Cell phone not correctly formatted or does not contain the international code.";
+           
+       }
              
              
     }
