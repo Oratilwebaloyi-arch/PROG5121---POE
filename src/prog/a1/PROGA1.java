@@ -32,8 +32,8 @@ public class PROGA1 {
         
 }
     public static void main(String[] args) {
-        PROGA1 user =new PROGA1("John","Doe");
-        System.out.println(user.verifyUserName("john_d"));
+        PROGA1 user =new PROGA1("kyle","peterson");
+        System.out.println(user.verifyUserName("kyl_1"));
     }
     
      //password requirements 
