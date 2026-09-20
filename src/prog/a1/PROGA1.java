@@ -45,8 +45,8 @@ public class PROGA1 {
         
         return containsUppercase && containsNumber && containsUniqueCharacter && correctLength;
 }
-       //cell phone verification 
-    public boolean verifyCellphone(String cellPhone){
+       //cellPhone verification 
+    public boolean verifyCellPhone(String cellPhone){
       // +27 then the 9 digits
       return cellPhone.matches("^\\+27\\d{9,10}$");
 } 
@@ -60,7 +60,7 @@ public class PROGA1 {
            return "Password not correctly formated;please ensure that the password contains atleast eight characters,a capital letter ,number and a special character.";
            
        }
-       if (!verifyCellphone(cellPhone)){
+       if (!verifyCellPhone(cellPhone)){
            return "Cell phone not correctly formatted or does not contain the international code.";
            
        }
@@ -76,13 +76,13 @@ public class PROGA1 {
         return this.username.equals(username)&& this.password.equals(password);
     }
      //login status
-    public String returnLoginStatus(String username ,String password);
+    public String returnLoginStatus(String username ,String password){
        if (loginUser(username ,password)){
            return "Welcome"+name +","+ surname + "great to see you again";
-        } esle {
+        }else{
              return "username or password incorrect , try again";
              
-    }
-    
+    } 
+  }  
 }
  
